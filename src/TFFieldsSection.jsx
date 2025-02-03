@@ -101,7 +101,7 @@ const TFFieldsSection = ({ formData, onChange }) => {
         <>
             <style dangerouslySetInnerHTML={{ __html: inlineStyles }} />
             <details className="tf-fields-section">
-                <summary>Term Frequency adjustments (defaults applied)</summary>
+                <summary>Term Frequency adjustments</summary>
                 <div className="tf-fields-container">
                     {renderField("tf_first_name_surname_concat", formData.tf_first_name_surname_concat,
                         (value) => onChange('tf_first_name_surname_concat', value)
