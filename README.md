@@ -4,6 +4,8 @@ A React app that uses DuckDB WASM to run a Splink data linking model live in a b
 
 It uses the model produced by the [50k historical persons demo](https://moj-analytical-services.github.io/splink/demos/examples/duckdb/deduplicate_50k_synthetic.html)
 
+You can see the live demo of the results [here](https://www.robinlinacre.com/live_splink/)
+
 ## Getting Started
 
 To run the app locally:
