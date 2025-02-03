@@ -33,7 +33,7 @@ const DisplayDuckDBResults = ({ loading, error, result, inputData }) => {
     let predictionData;
     let finalMatchWeight = null;
     let matchProbability = null;
-
+    debugger;
     try {
         const parsedResult = JSON.parse(result);
         const row = parsedResult[0];

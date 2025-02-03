@@ -75,8 +75,6 @@ const DuckDBQueryRunner = ({ data, children }) => {
                     await conn.insertJSONFromPath('left.json', { name: 'tbl_left' });
                     await conn.insertJSONFromPath('right.json', { name: 'tbl_right' });
 
-
-                    debugger;
                     // Define transformation queries.
                     const transformQueryLeft = `
             CREATE OR REPLACE TABLE __splink__compare_two_records_left AS
@@ -85,7 +83,7 @@ const DuckDBQueryRunner = ({ data, children }) => {
 
               try_cast(first_name as VARCHAR) as first_name,
               try_cast(surname as VARCHAR) as surname,
-              try_cast(dob as VARCHAR) as dob,
+              try_cast(try_cast(dob as DATE) as VARCHAR) as dob,
               try_cast(birth_place as VARCHAR) as birth_place,
               try_cast(postcode_fake as VARCHAR) as postcode_fake,
               try_cast(occupation as VARCHAR) as occupation,
@@ -104,7 +102,7 @@ const DuckDBQueryRunner = ({ data, children }) => {
 
               try_cast(first_name as VARCHAR) as first_name,
               try_cast(surname as VARCHAR) as surname,
-              try_cast(dob as VARCHAR) as dob,
+              try_cast(try_cast(dob as DATE) as VARCHAR) as dob,
               try_cast(birth_place as VARCHAR) as birth_place,
               try_cast(postcode_fake as VARCHAR) as postcode_fake,
               try_cast(occupation as VARCHAR) as occupation,
