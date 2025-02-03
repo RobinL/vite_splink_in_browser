@@ -1,0 +1,169 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Minimal styling for the App component */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 2rem;
+  color: #333;
+}
+
+/* Container for the two forms */
+.forms-wrapper {
+  display: flex;
+  gap: 16px;
+}
+
+/* Individual form container styling */
+.form-container {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Title for each form */
+.form-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+/* Navigation button styling */
+.nav-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  margin-bottom: 20px;
+}
+
+.nav-buttons .button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-buttons button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.nav-buttons button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.nav-buttons button:not(:disabled):hover {
+  background-color: #0056b3;
+}
+
+.nav-buttons .record-info {
+  font-weight: bold;
+  margin: 0;
+  display: inline-block;
+}
+
+.nav-buttons .nav-hint {
+  font-size: 0.85rem;
+  color: #555;
+  display: inline-block;
+  margin: 0;
+}
+
+/* For labels requiring monospace font */
+.mono-label {
+  font-family: monospace;
+}
+
+/* NEW: Align form labels within rows for a neat layout */
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.row label {
+  width: 130px;  /* Reduced from 150px */
+  text-align: right;
+  margin-right: 8px;
+}
+
+.row input {
+  flex: 0 1 150px; /* Reduced from 200px */
+  min-width: 0;
+}
+
+/* NEW: Indent array rows so inputs align with rows with a label */
+.array-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding-left: 138px; /* 130px label width + 8px margin */
+}
+
+/* Style for the add/remove buttons */
+.add-button {
+  padding: 0 4px;
+  margin-left: 4px;
+  flex: 0 0 auto;
+  min-width: 24px; /* Ensure consistent width */
+}
+
+/* Add new rules for postcode inputs */
+.postcode-input {
+  flex: 0 1 75px !important; /* Half width of regular inputs */
+}
+
+/* Style for array input containers */
+.array-input-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}

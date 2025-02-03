@@ -1,0 +1,49 @@
+:global(.diff-added) {
+    background-color: #e6ffe6;
+    text-decoration: none;
+    color: #2a2;
+    padding: 0 1px;
+}
+
+:global(.diff-removed) {
+    background-color: #ffe6e6;
+    text-decoration: none;
+    color: #a22;
+    padding: 0 1px;
+}
+
+:global(.diff-unchanged) {
+    color: #333;
+}
+
+:global(.diff-cell) {
+    font-family: monospace;
+}
+
+.record-table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 100%;
+    font-family: monospace;
+    font-size: 12px;
+}
+
+.record-table th,
+.record-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.record-table th {
+    background-color: #f2f2f2;
+}
+
+.record-table tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.diff-row td {
+    border: none;
+    background-color: #ffffff;
+}

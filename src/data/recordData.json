@@ -1,0 +1,58 @@
+[
+  {
+    "record_left": {
+      "unique_id": "Q2296770-1",
+      "cluster": "Q2296770",
+      "first_name": "tom",
+      "surname": "chudleigh",
+      "dob": null,
+      "birth_place": null,
+      "postcode_fake": null,
+      "occupation": null
+    },
+    "record_right": {
+      "unique_id": "Q2296770-1",
+      "cluster": "Q2296770",
+      "first_name": "thomas",
+      "surname": "chudleigh",
+      "dob": "1630-08-01",
+      "birth_place": "devon",
+      "postcode_fake": "tq13 8df",
+      "occupation": "politician"
+    }
+  },
+  {
+    "record_left": {
+      "unique_id": "Q2296770-1",
+      "cluster": "Q2296770",
+      "first_name": "thomas",
+      "surname": "chudleigh",
+      "dob": "1630-08-01",
+      "birth_place": "devon",
+      "postcode_fake": "tq13 8df",
+      "occupation": "politician",
+      "first_name_surname_concat": "thomas chudleigh",
+      "tf_first_name_surname_concat": 0.000018837,
+      "tf_surname": 0.00003449,
+      "tf_first_name": 0.000018837,
+      "tf_birth_place": 0.000504,
+      "tf_occupation": 0.0038905
+    },
+    "record_right": {
+      "unique_id": "Q2296770-1",
+      "cluster": "Q2296770",
+      "first_name": "thomas",
+      "surname": "chudleigh",
+      "dob": "1630-08-01",
+      "birth_place": "devon",
+      "postcode_fake": "tq13 8df",
+      "occupation": "politician",
+      "first_name_surname_concat": "thomas chudleigh",
+      "tf_first_name_surname_concat": 0.00018837,
+      "tf_surname": 0.0003449,
+      "tf_first_name": 0.00018837,
+      "tf_birth_place": 0.00504,
+      "tf_occupation": 0.038905
+    }
+  }
+]
