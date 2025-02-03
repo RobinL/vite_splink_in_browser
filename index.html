@@ -1128,7 +1128,6 @@ const DuckDBQueryRunner = ({ data, children }) => {
           await db.registerFileText("right.json", JSON.stringify([data.record_right]));
           await conn.insertJSONFromPath("left.json", { name: "tbl_left" });
           await conn.insertJSONFromPath("right.json", { name: "tbl_right" });
-          debugger;
           const transformQueryLeft = `
             CREATE OR REPLACE TABLE __splink__compare_two_records_left AS
             SELECT
@@ -1136,7 +1135,7 @@ const DuckDBQueryRunner = ({ data, children }) => {
 
               try_cast(first_name as VARCHAR) as first_name,
               try_cast(surname as VARCHAR) as surname,
-              try_cast(dob as VARCHAR) as dob,
+              try_cast(try_cast(dob as DATE) as VARCHAR) as dob,
               try_cast(birth_place as VARCHAR) as birth_place,
               try_cast(postcode_fake as VARCHAR) as postcode_fake,
               try_cast(occupation as VARCHAR) as occupation,
@@ -1155,7 +1154,7 @@ const DuckDBQueryRunner = ({ data, children }) => {
 
               try_cast(first_name as VARCHAR) as first_name,
               try_cast(surname as VARCHAR) as surname,
-              try_cast(dob as VARCHAR) as dob,
+              try_cast(try_cast(dob as DATE) as VARCHAR) as dob,
               try_cast(birth_place as VARCHAR) as birth_place,
               try_cast(postcode_fake as VARCHAR) as postcode_fake,
               try_cast(occupation as VARCHAR) as occupation,
@@ -70605,6 +70604,7 @@ const DisplayDuckDBResults = ({ loading, error, result, inputData }) => {
   let predictionData;
   let finalMatchWeight = null;
   let matchProbability = null;
+  debugger;
   try {
     const parsedResult = JSON.parse(result);
     const row = parsedResult[0];
